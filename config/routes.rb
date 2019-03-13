@@ -1,3 +1,14 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+# Root route
+root "demo#index"
+
+# Simple route 
+# created by "rails generate controller" 
+  get 'demo/index'
+
+# Default rout
+# may go away in future versions of Rails
+#  get ':controller(/:action(/:id))'
+
 end
