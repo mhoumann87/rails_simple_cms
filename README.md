@@ -1,24 +1,12 @@
-# README
+# Simple CNS system
+## Build in Ruby on Rails
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Made as part of the [Ruby on Rails 5 Essential Training](https://www.lynda.com/Ruby-Rails-tutorials/Ruby-Rails-5-Essential-Training/500551-2.html)course on [lynda.com](https://www.lynda.com/).
 
-Things you may want to cover:
+* Ruby version 2.6.1
 
-* Ruby version
+* Rails version 5.2.2
 
-* System dependencies
+* Database MySql
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
