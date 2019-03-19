@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_18_105048) do
+ActiveRecord::Schema.define(version: 2019_03_18_111743) do
 
   create_table "admin_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "first_name", limit: 25
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_105048) do
   create_table "section_edits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "admin_user_id"
     t.integer "section_id"
-    t.string "summery"
+    t.string "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["admin_user_id", "section_id"], name: "index_section_edits_on_admin_user_id_and_section_id"
