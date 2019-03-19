@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
 
 # Root route
-root "demo#index"
+root 'demo#index'
+
+resources :subjects do
+  member do
+    get :delete
+  end
+end
 
 # Simple route 
 # created by "rails generate controller" 
