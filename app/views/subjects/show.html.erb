@@ -3,13 +3,10 @@
     <%= flash[:notice] %>
   </div>
 <% end %>
-
 <%= link_to("<< Back to List", subjects_path, :class => "back-line") %>
-
 <div class="subjects show">
   <h2>Show Subject</h2>
-
-  <table summare="Subject detail view">
+  <table summary="Subject detail view">
     <tr>
       <th>Name</th>
       <td><%= @subject.name %></td>

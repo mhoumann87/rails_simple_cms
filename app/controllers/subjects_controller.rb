@@ -36,11 +36,11 @@ class SubjectsController < ApplicationController
     
     # Save the object
     if @subject.update_attributes(subject_params)
-    # If save succeeds, redirect to the show action
+      # If save succeeds, redirect to the show action
       flash[:notice] = "Subject updated successfully"
       redirect_to(subject_path(@subject))
     else
-    # It save fails, redisplay the form so user can fix problelms
+      # It save fails, redisplay the form so user can fix problelms
       render("edit")
     end
   end
