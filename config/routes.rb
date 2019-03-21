@@ -25,6 +25,7 @@ end
   get 'demo/index'
   get 'demo/hello'
   get 'demo/other_hello'
+  get 'demo/escape_output'
 
 # Default rout
 # may go away in future versions of Rails
