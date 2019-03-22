@@ -1,3 +1,5 @@
 <h1>Hello World from Index</h1>
 <%= link_to('Hello page', {:action=> 'hello'}) %><br />
-<%= link_to('Hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %>
+<%= link_to('Hello with parameters', {:action => 'hello', :page => 5, :id => 20}) %></br>
+
+<%= link_to("Roar", "#", :onclick => "jsRoar('JavaScript'); return true;") %>

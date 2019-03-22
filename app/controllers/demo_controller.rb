@@ -1,6 +1,7 @@
-class DemoController < ApplicationController
+# frozen_string_literal: true
 
-  layout false
+class DemoController < ApplicationController
+  layout 'application'
 
   def index
     render('index')
@@ -14,9 +15,8 @@ class DemoController < ApplicationController
   end
 
   def other_hello
-    redirect_to(:action => 'hello')
+    redirect_to(action: 'hello')
   end
 
-  def escape_output
-  end
+  def escape_output; end
 end
