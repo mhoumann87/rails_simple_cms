@@ -1,6 +1,7 @@
 <% @page_title = "All Pages" %>
 <div class="pages index">
   <h2>Pages</h2>
+  <%= image_tag("plus_sign.png", :size => "11x11", :alt => "+") %>
   <%= link_to("Add New Page", new_page_path, :class => "action new") %>
   <table class="listing" summary="Pages list">
     <tr>
@@ -16,16 +17,16 @@
       <tr>
         <td><%= page.position%></td>
         <td><%= page.subject_id %>
-        <td><%= page.name %></td>
-        <td><%= page.permalink %></td>
-        <td class="center"><%= status_tag(page.visible) %></td>
-        <td class="center"><%= page.sections.size %></td>
-        <td>
-          <%= link_to("Show", page_path(page), :class => "action show") %>
-          <%= link_to("Edit", edit_page_path(page), :class => "action edit") %>
-          <%= link_to("Delete", delete_page_path(page), :class => "action delete") %>
-        </td>
-      </tr>
-    <% end %>
-  </table>
-</div>
+          <td><%= page.name %></td>
+          <td><%= page.permalink %></td>
+          <td class="center"><%= status_tag(page.visible) %></td>
+          <td class="center"><%= page.sections.size %></td>
+          <td>
+            <%= link_to("Show", page_path(page), :class => "action show") %>
+            <%= link_to("Edit", edit_page_path(page), :class => "action edit") %>
+            <%= link_to("Delete", delete_page_path(page), :class => "action delete") %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>

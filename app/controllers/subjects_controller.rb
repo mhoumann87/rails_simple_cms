@@ -1,6 +1,7 @@
-class SubjectsController < ApplicationController
+# frozen_string_literal: true
 
-  layout "admin"
+class SubjectsController < ApplicationController
+  layout 'admin'
 
   def index
     @subjects = Subject.sorted
@@ -12,6 +13,7 @@ class SubjectsController < ApplicationController
 
   def new
     @subject = Subject.new
+    @subject_count = Subject.count + 1
   end
 
   def create
@@ -20,34 +22,37 @@ class SubjectsController < ApplicationController
 
     # Save the object
     if @subject.save
-    # If save succeeds, redirect to the index action
-      flash[:notice] = "Subject created successfully"
+      # If save succeeds, redirect to the index action
+      flash[:notice] = 'Subject created successfully'
       redirect_to(subjects_path)
     else
-    # It save fails, redisplay the form so user can fix problelms
-      render("new")
+      # It save fails, redisplay the form so user can fix problelms
+      @subject_count = Subject.count + 1
+      render('new')
     end
   end
 
   def edit
     @subject = Subject.find(params[:id])
+    @subject_count = Subject.count
   end
 
   def update
     # Instantiate a new object using form parameters
     @subject = Subject.find(params[:id])
-    
+
     # Save the object
     if @subject.update_attributes(subject_params)
       # If save succeeds, redirect to the show action
-      flash[:notice] = "Subject updated successfully"
+      flash[:notice] = 'Subject updated successfully'
       redirect_to(subject_path(@subject))
     else
       # It save fails, redisplay the form so user can fix problelms
-      render("edit")
+      @subject_count = Subject.count
+      render('edit')
     end
   end
-  
+
   def delete
     @subject = Subject.find(params[:id])
   end
@@ -64,5 +69,4 @@ class SubjectsController < ApplicationController
   def subject_params
     params.require(:subject).permit(:name, :position, :visible)
   end
-
 end
