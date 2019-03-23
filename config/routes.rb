@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'admin_users_controller/index'
-  get 'admin_users_controller/new'
-  get 'admin_users_controller/create'
-  get 'admin_users_controller/edit'
-  get 'admin_users_controller/update'
-  get 'admin_users_controller/delete'
-  get 'admin_users_controller/destroy'
   # Root route
   root 'demo#index'
 
@@ -15,6 +8,12 @@ Rails.application.routes.draw do
   get 'access/login'
   post 'access/attempt_login'
   get 'access/logout'
+
+resources :admin_users, :except => [:show] do
+  member do
+    get :delete
+  end
+end
 
 resources :subjects do
   member do
