@@ -1,5 +1,5 @@
 <% @page_title = "Display Section" %>
-<%= link_to("<< Back to List", sections_path, :class => "back-line")%>
+<%= link_to("<< Back to List", sections_path(:page_id => @page.id), :class => "back-line")%>
 <div class="sections show">
   <h2>Show Section</h2>
   <table summary="Section detail view">

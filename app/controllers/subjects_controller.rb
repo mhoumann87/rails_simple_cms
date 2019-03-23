@@ -70,7 +70,7 @@ class SubjectsController < ApplicationController
     params.require(:subject).permit(:name, :position, :visible)
   end
 
-  def set_sbuject_count
+  def set_subject_count
     @subject_count = Subject.count
     if params[:action] == "new" || params[:action] == "create"
       @subject_count += 1

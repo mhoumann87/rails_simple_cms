@@ -95,17 +95,18 @@ h1 {
 }
 
 #main {
-  min-height: calc(100vh - 5.5em);
+  min-height: calc(100vh - 10em);
   background: $yellow;
 }
 
 #navigation {
   float: left;
   width: 180px;
-  min-height: 480px;
+  min-height: calc(100vh - 10em);
   padding: 10px;
   background: $green;
   color: $light_brown;
+  margin-right: 1em;
 }
 
 #content {
